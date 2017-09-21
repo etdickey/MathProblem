@@ -71,9 +71,9 @@ int main() {
 }
 
 void swap(int*first, int*second){
-	int *temp=first;
+	int temp=*first;
 	second=first;
-	first=temp;
+	first=&temp;
 }
 
 void rotate(int* r[]){
