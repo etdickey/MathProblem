@@ -47,14 +47,14 @@ int main() {
 	int currentRotation[NUMBER_OF_NUMBERS];
 
 	for(int i=0;i<NUMBER_OF_NUMBERS;i++){
-		currentRotation[i]=ORIGIN[i];
+            currentRotation[i]=ORIGIN[i];
 	}
 
 	int currentCombination[NUMBER_OF_NUMBERS];
 
 	enum positions{a,b,c,d,e,f,g,h,i};
 
-	for(int a=1;a<=9;a++){//position a will stop
+	for(a=1;a<=9;a++){//position a will stop
 
 	}
 
