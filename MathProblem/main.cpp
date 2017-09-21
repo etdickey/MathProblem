@@ -6,7 +6,7 @@
 
 /* 
  * File:   main.cpp
- * Author: Josh
+ * Author: Josh and Ethan
  *
  * Created on September 21, 2017, 4:00 PM
  */
