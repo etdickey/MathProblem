@@ -54,11 +54,10 @@ int main() {
 
 	enum positions{a,b,c,d,e,f,g,h,i};
 
-	for(a=1;a<=9;a++){//position a will stop
+	for(int a=1;a<=9;a++){//position a will stop
 
 	}
-
-
+        
 
 
 
@@ -72,8 +71,9 @@ int main() {
 
 void swap(int*first, int*second){
 	int temp=*first;
-	second=first;
-	first=&temp;
+	*second=*first;
+	*first=temp;
+        return;
 }
 
 void rotate(int* r[]){
