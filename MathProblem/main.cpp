@@ -5,7 +5,6 @@
  * Created on September 21, 2017, 4:00 PM
  */
 
-
 //============================================================================
 // Name        : NineDifferentNumbers.cpp
 // Author      : Josh Holland and Ethan Dickey
@@ -33,21 +32,12 @@
 
 #include "Prototypes.h"
 
-
-
-
-
-
-
 int main() {
 /**
  * idea:: create a bunch of functions that do individual work and call upon each other going down and simply rotates at that level
  * @return 
  */
-    
-    
     out.open("Solutions.txt");
-    
     
     int workingArray[NUMBER_OF_NUMBERS];
     for(int z = 0;z<NUMBER_OF_NUMBERS;z++){
