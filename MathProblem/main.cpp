@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   main.cpp
  * Author: Josh and Ethan
@@ -25,11 +19,12 @@
  *  		sequence and makes all the possible combinations
  *  		of these numbers without using one number twice
  *
- *This program attempts to find ALL (so no random guessing)
-//solutions to this problem in a more efficient manner than simply going
-//through all possible numbers between 0 and 1 billion:::
-//Rule: the 9 numbers (n1-n9) cannot repeat each other.
-//Find the solutions to this equation: (n1/n2*n3+n4*n5*n6/n7+n8*n9)=100
+ * This program attempts to find ALL (so no random guessing)
+ * solutions to this problem in a more efficient manner than simply going
+ * through all possible numbers between 0 and 1 billion:::
+ * Rule: the 9 numbers (n1-n9) cannot repeat each other.
+ * Find the solutions to this equation: (n1/n2*n3+n4*n5*n6/n7+n8*n9)=100
+ * 
  * 1. There will be 9! (362880) different numbers tested
  * 2.
  *
