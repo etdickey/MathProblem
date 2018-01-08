@@ -54,7 +54,7 @@ void printNums(int numbers[],ostream&);
 /**
  * checks a file to determine if all the solutions in the file are actual solutions to the math equation 
  */
-bool validmathsol(int numberSol,string fileName);
+//bool validmathsol(int numberSol,string fileName);
 
 
 #endif /* PROTOTYPES_H_ */

@@ -55,7 +55,6 @@ int main() {
 }
 
 void swapGT3(int n,int workingArray[]){//, int inArray[]
-//    int workingArray[NUMBER_OF_NUMBERS]=masterArray;
     if(n==3){
         swap3(workingArray);
     } else{
@@ -112,43 +111,43 @@ void printNums(int numbers[],ostream& out){
     iterations++;
 }
 
+//bool validmathsol(int numberSol,string fileName){
+//    ifstream in;
+//    in.open(fileName);//the output file for mathsol() is Solutions.txt
+//    if(in.fail()){
+//        cout << "File open error:: validmathsol() filename:: " << fileName << endl;
+//        exit(1);
+//    }
+//    int line=0;
+//    long int num=0;
+//    double n1,n2,n3,n4,n5,n6,n7,n8,n9;
+//    int count=0;
+//    do{
+//        if(in.peek()!='\n'){
+//            in >> num;
+//            n9=num%10;
+//            n8=(num/10)%10;
+//            n7=(num/100)%10;
+//            n6=(num/1000)%10;
+//            n5=(num/10000)%10;
+//            n4=(num/100000)%10;
+//            n3=(num/1000000)%10;
+//            n2=(num/10000000)%10;
+//            n1=(num/100000000)%10;
+//            if((n1/n2*n3+n4*n5*n6/n7+n8*n9)==100){
+//                count++;
+//            }
+//        }
+//        line++;
+//    }while(line<192);
+//    in.close();
+//    if(count==numberSol){
+//        return true;
+//    } else {
+//        return false;
+//    }
+//}
 
-bool validmathsol(int numberSol,string fileName){
-    ifstream in;
-    in.open(fileName);//the output file for mathsol() is Solutions.txt
-    if(in.fail()){
-        cout << "File open error:: validmathsol() filename:: " << fileName << endl;
-        exit(1);
-    }
-    int line=0;
-    long int num=0;
-    double n1,n2,n3,n4,n5,n6,n7,n8,n9;
-    int count=0;
-    do{
-        if(in.peek()!='\n'){
-            in >> num;
-            n9=num%10;
-            n8=(num/10)%10;
-            n7=(num/100)%10;
-            n6=(num/1000)%10;
-            n5=(num/10000)%10;
-            n4=(num/100000)%10;
-            n3=(num/1000000)%10;
-            n2=(num/10000000)%10;
-            n1=(num/100000000)%10;
-            if((n1/n2*n3+n4*n5*n6/n7+n8*n9)==100){
-                count++;
-            }
-        }
-        line++;
-    }while(line<192);
-    in.close();
-    if(count==numberSol){
-        return true;
-    } else {
-        return false;
-    }
-}
 //Josh's first attempt
 //void swap(int*first, int*second);
 //
