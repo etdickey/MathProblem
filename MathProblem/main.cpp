@@ -52,6 +52,14 @@ int main() {
     cout << "The number of iterations should be 9! or 362880" <<  endl;
     cout << "Iterations: " << iterations << endl;
     
+    ifstream in;
+    in.open("Solutions.txt");
+    if(checkSolutions(in)){
+        cout << "Solutions are correct" << endl;
+    } else {
+        cout << "Solutions are incorrect" << endl;
+    }
+    
     return 0;
 }
 
