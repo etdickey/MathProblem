@@ -81,23 +81,18 @@ void rotateMasterArray(int n){
 
 void swap3(int workingArray[]){
     swap(workingArray[0],workingArray[1]);
-    //do stuff (record?)
     printNums(workingArray,out);
     
     swap(workingArray[1],workingArray[2]);
-    //do stuff
     printNums(workingArray,out);
     
     swap(workingArray[0],workingArray[1]);
-    //do stuff
     printNums(workingArray,out);
     
     swap(workingArray[1],workingArray[2]);
-    //do stuff
     printNums(workingArray,out);
     
     swap(workingArray[0],workingArray[1]);
-    //do stuff
     printNums(workingArray,out);
 }
 
