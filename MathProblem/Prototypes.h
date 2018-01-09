@@ -19,6 +19,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
+#include <sstream>
 
 using namespace std;
 ofstream out;

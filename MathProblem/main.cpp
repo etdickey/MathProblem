@@ -109,11 +109,29 @@ void printNums(int numbers[],ostream& out){
 //===========================
 //TESTING FUNCTIONS::
 //===========================
-void ckeckSolutions(){
-    ifstream in;
-    in.open("Solutions.txt");
+bool checkSolutions(ifstream& in){
+    int toTest;
+    stringstream toString;
+    int used[NUMBER_OF_NUMBERS];
+    int iter=0;//per each character
+    bool worked = true;
     
+    while(in >> toTest){//For each line
+        toString.str(toTest);//put the string containing the line into the stringstream
+        char character;//character to import
+        while(toString >> character){//While the line still has characters
+            used[iter] = static_cast<int>(character);//import the next character and translate it to an integer value
+            for(int space = 0; space < iter; space++){//for each previous character, check if it is the same as the character just taken. 
+                if(used[iter] == used[space]){//if the character has already been found in the line (which makes the answer invalid)
+                    worked=false;
+                }
+            }
+            iter++;
+        }
+        iter=0;
+    }
     
+    return worked;
 }
 
 //bool validmathsol(int numberSol,string fileName){
