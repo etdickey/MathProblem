@@ -47,9 +47,10 @@ int main() {
     printNums(workingArray,out);
     swapGT3(NUMBER_OF_NUMBERS,workingArray);
     
-    out << "The number of iterations should be 9! or 362880" <<  endl;
-    out << "Iterations: " << iterations << endl;
     out.close();
+    
+    cout << "The number of iterations should be 9! or 362880" <<  endl;
+    cout << "Iterations: " << iterations << endl;
     
     return 0;
 }
