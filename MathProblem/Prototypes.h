@@ -34,11 +34,13 @@ const int NUMBER_OF_NUMBERS=9;
  * @param workingArray
  */
 void swapGT3(int n, int workingArray[]);
+
 /**
  * rotates the master array up to the nth element once
  * @param n
  */
 void rotateMasterArray(int n);
+
 /**
  * swaps the bottom 3 numbers
  * @param workingArray
@@ -51,10 +53,19 @@ void swap3(int workingArray[]);
  * @param 
  */
 void printNums(int numbers[],ostream&);
+
 /**
- * checks a file to determine if all the solutions in the file are actual solutions to the math equation 
+ * checks a file to determine if all the solutions in the file are actual 
+ * solutions to the math equation 
  */
 //bool validmathsol(int numberSol,string fileName);
 
+/**
+ * Checks the numbers in the input file to ensure that none of them contain 
+ * the same number twice.
+ * @param in
+ * @return 
+ */
+bool checkSolutions(ifstream& in);
 
 #endif /* PROTOTYPES_H_ */
