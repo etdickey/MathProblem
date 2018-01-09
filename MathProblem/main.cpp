@@ -106,6 +106,16 @@ void printNums(int numbers[],ostream& out){
     iterations++;
 }
 
+//===========================
+//TESTING FUNCTIONS::
+//===========================
+void ckeckSolutions(){
+    ifstream in;
+    in.open("Solutions.txt");
+    
+    
+}
+
 //bool validmathsol(int numberSol,string fileName){
 //    ifstream in;
 //    in.open(fileName);//the output file for mathsol() is Solutions.txt
