@@ -52,6 +52,12 @@ int main() {
     cout << "The number of iterations should be 9! or 362880" <<  endl;
     cout << "Iterations: " << iterations << endl;
     
+    //Testing process::
+    
+    ifstream in;
+    in.open("Solutions.txt");
+    checkSolutions(in);
+    
     return 0;
 }
 
@@ -118,7 +124,7 @@ bool checkSolutions(ifstream& in){
     bool worked = true;
     
     while(in >> toTest){//For each line
-        toString.str(toTest);//put the string containing the line into the stringstream
+        toString.str(static_cast<string>(toTest));//put the string containing the line into the stringstream
         char character;//character to import
         while(toString >> character){//While the line still has characters
             used[iter] = static_cast<int>(character);//import the next character and translate it to an integer value
