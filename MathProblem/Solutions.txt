@@ -362878,5 +362878,3 @@
 217345869
 271345869
 721345869
-The number of iterations should be 9! or 362880
-Iterations: 362880

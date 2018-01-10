@@ -20,6 +20,7 @@
 #include <cstdlib>
 #include <fstream>
 #include <sstream>
+#include <string>
 
 using namespace std;
 ofstream out;
@@ -56,16 +57,17 @@ void swap3(int workingArray[]);
 void printNums(int numbers[],ostream&);
 
 /**
- * checks a file to determine if all the solutions in the file are actual 
- * solutions to the math equation 
- */
-//bool validmathsol(int numberSol,string fileName);
-
-/**
- * Checks the numbers in the input file to ensure that none of them contain 
- * the same number twice.
- * @param in
- * @return 
+ * This function checks the validity of the solutions given through the 
+ *      ifstream in; the validity is determined by if each of the solutions
+ *      has a different number in each spot. 
+ * 
+ * precondition: in is open and is valid. 
+ *               in pulls only integers.
+ * 
+ * postcondition: The validity has been returned as a boolean value. 
+ * 
+ * @param in the ifstream instance used to get the input data.
+ * @return if the solutions are valid.
  */
 bool checkSolutions(ifstream& in);
 

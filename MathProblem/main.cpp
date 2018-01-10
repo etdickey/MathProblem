@@ -60,11 +60,13 @@ int main() {
         cout << "Solutions are incorrect" << endl;
     }
     
+    in.close();
+    
     return 0;
 }
 
 void swapGT3(int n,int workingArray[]){//, int inArray[]
-    if(n==3){
+    if(n==3){//If the size passed in is 3 then the function should go through the swap process.
         swap3(workingArray);
     } else{
         swapGT3(n-1,workingArray);
@@ -106,7 +108,6 @@ void swap3(int workingArray[]){
 }
 
 
-
 void printNums(int numbers[],ostream& out){
     for(unsigned int j=0;j<NUMBER_OF_NUMBERS;j++){
             out << numbers[j];
@@ -118,17 +119,20 @@ void printNums(int numbers[],ostream& out){
 //===========================
 //TESTING FUNCTIONS::
 //===========================
+
 bool checkSolutions(ifstream& in){
     int toTest;
+    string into;
     stringstream toString;
     int used[NUMBER_OF_NUMBERS];
     int iter=0;//per each character
     bool worked = true;
     
     while(in >> toTest){//For each line
-        toString.str(static_cast<string>(toTest));//put the string containing the line into the stringstream
+        toString.clear();
+        toString.str(to_string(toTest));//put the string containing the line into the stringstream
         char character;//character to import
-        while(toString >> character){//While the line still has characters
+        while(toString >> character && iter < NUMBER_OF_NUMBERS){//While the line still has characters and less than 9 characters have been taken in and checked.
             used[iter] = static_cast<int>(character);//import the next character and translate it to an integer value
             for(int space = 0; space < iter; space++){//for each previous character, check if it is the same as the character just taken. 
                 if(used[iter] == used[space]){//if the character has already been found in the line (which makes the answer invalid)
@@ -142,58 +146,4 @@ bool checkSolutions(ifstream& in){
     
     return worked;
 }
-
-//bool validmathsol(int numberSol,string fileName){
-//    ifstream in;
-//    in.open(fileName);//the output file for mathsol() is Solutions.txt
-//    if(in.fail()){
-//        cout << "File open error:: validmathsol() filename:: " << fileName << endl;
-//        exit(1);
-//    }
-//    int line=0;
-//    long int num=0;
-//    double n1,n2,n3,n4,n5,n6,n7,n8,n9;
-//    int count=0;
-//    do{
-//        if(in.peek()!='\n'){
-//            in >> num;
-//            n9=num%10;
-//            n8=(num/10)%10;
-//            n7=(num/100)%10;
-//            n6=(num/1000)%10;
-//            n5=(num/10000)%10;
-//            n4=(num/100000)%10;
-//            n3=(num/1000000)%10;
-//            n2=(num/10000000)%10;
-//            n1=(num/100000000)%10;
-//            if((n1/n2*n3+n4*n5*n6/n7+n8*n9)==100){
-//                count++;
-//            }
-//        }
-//        line++;
-//    }while(line<192);
-//    in.close();
-//    if(count==numberSol){
-//        return true;
-//    } else {
-//        return false;
-//    }
-//}
-
-//Josh's first attempt
-//void swap(int*first, int*second);
-//
-//void rotate(int* r[]);
-//void swap(int*first, int*second){
-//	int temp=*first;
-//	*second=*first;
-//	*first=temp;
-//        return;
-//}
-//
-//void rotate(int* r[]){
-//
-//}
-
-
 
